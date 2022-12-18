@@ -4,7 +4,7 @@ import pynecone as pc
 from pynecone import Component
 
 from pcconfig import config
-from pynecone_website.components import navbar
+from pynecone_website.components import footer, navbar
 
 docs_url = "https://pynecone.io/docs/getting-started/introduction"
 filename = f"{config.app_name}/{config.app_name}.py"
@@ -23,21 +23,22 @@ def landing() -> Component:
                 pc.text(
                     "Belgium",
                     background_image=(
-                        "linear-gradient(271.68deg, #EE756A 0.75%," " #756AEE 88.52%)"
+                        "linear-gradient(271.68deg, #EE756A 0.75%, #756AEE 88.52%)"
                     ),
                     background_clip="text",
                 ),
                 font_size="2em",
             ),
-            pc.box("Get started by editing ", pc.code(filename, font_size="1em")),
             pc.link(
-                "Check out our docs!",
-                href=docs_url,
-                border="0.1em solid",
+                "Check out our events!",
+                href="https://www.meetup.com/python-user-group-belgium/events/",
                 padding="0.5em",
-                border_radius="0.5em",
+                box_shadow="rgba(151, 65, 252, 0.8) 0 15px 30px -10px",
+                background_image="linear-gradient(144deg,#AF40FF,#5B42F3 50%,#00DDEB)",
+                border_radius="1em",
+                color="white",
                 _hover={
-                    "color": "rgb(107,99,246)",
+                    "opacity": 0.85,
                 },
             ),
             spacing="1.5em",
@@ -84,6 +85,6 @@ def index() -> Component:
     """Index page for website."""
     return pc.box(
         navbar(),
-        pc.vstack(landing(), about()),
+        pc.vstack(landing(), about(), footer()),
         position="relative",
     )
