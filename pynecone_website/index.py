@@ -28,6 +28,7 @@ def landing() -> Component:
                     background_clip="text",
                 ),
                 font_size="2em",
+                padding_x=8,
             ),
             pc.link(
                 "Check out our events!",
