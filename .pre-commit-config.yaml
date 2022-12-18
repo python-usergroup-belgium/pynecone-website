@@ -1,0 +1,26 @@
+default_language_version:
+  python: python3
+exclude: ^(.web/|assets/)
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v3.2.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+  - repo: https://github.com/Zac-HD/shed
+    rev: 0.10.7
+    hooks:
+      - id: shed
+  - repo: https://github.com/pycqa/flake8
+    rev: 4.0.1
+    hooks:
+      - id: flake8
+        additional_dependencies:
+          - flake8-docstrings==1.6.0
+          - flake8-print==5.0.0
+          - flake8-annotations==2.9.1
+        args: ["--ignore", "E203,W503,ANN401", "--max-line-length", "88"]
+  - repo: https://github.com/myint/eradicate
+    rev: v2.1.0
+    hooks:
+      - id: eradicate

@@ -127,3 +127,12 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# IDE files
+.idea/
+
+# Database - not required
+pynecone.db
+
+# Web build files
+.web/

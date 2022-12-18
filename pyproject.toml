@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "pynecone-website"
+version = "0.1.0"
+description = ""
+authors = ["Murilo Cunha <@murilo-cunha>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "pynecone_website"}]
+
+[tool.poetry.dependencies]
+python = "~3.11"
+pynecone-io = "^0.1.10"
+
+
+[tool.poetry.group.dev.dependencies]
+pre-commit = "^2.20.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
