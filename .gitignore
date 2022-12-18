@@ -131,8 +131,5 @@ dmypy.json
 # IDE files
 .idea/
 
-# Database - not required
+# Database - not required for frontend only (static)
 pynecone.db
-
-# Web build files
-.web/
