@@ -51,7 +51,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}-
       - name: Install dependencies
-        run: ~/.bun/bin/bun install --lockfile .web/bun.lockb
+        run: ~/.bun/bin/bun install --cwd .web
       - name: Build and export with Bun
         run: cd .web && bun run export
       - name: Upload artifact
