@@ -8,7 +8,8 @@ def navbar() -> pc.Component:
         pc.hstack(
             pc.link(
                 pc.hstack(
-                    pc.image(src="logo.png", height="3em"), pc.heading("Python UG BE")
+                    pc.image(src="logo.png", height="3em"),
+                    pc.heading("Python UG BE", size="lg"),
                 ),
                 href="/",
             ),

@@ -49,7 +49,7 @@ passHref={true}>
 <HStack>
 <Image src="logo.png"
 sx={{"height": "3em"}}/>
-<Heading>
+<Heading size="lg">
 {`Python UG BE`}</Heading></HStack></Link></NextLink>
 <HStack>
 <NextLink href="https://www.meetup.com/python-user-group-belgium/"
@@ -96,9 +96,9 @@ sx={{"height": "1.5em"}}/>
 sx={{"height": "1.5em"}}/></Text></Center></VStack>
 <NextHead>
 <title>{`Python UG BE`}</title>
-<meta content="A Pynecone app."
-name="description"/>
-<meta content="favicon.ico"
-property="og:image"/></NextHead></Box>
+<meta name="description"
+content="A Pynecone app."/>
+<meta property="og:image"
+content="favicon.ico"/></NextHead></Box>
 )
 }
