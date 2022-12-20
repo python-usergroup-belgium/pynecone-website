@@ -75,6 +75,7 @@ The Python User Group in Belgium is a community of Python enthusiasts who come t
 
 The focus is on knowledge sharing and community building, commercial intents are\
  frowned upon. All events are entirely free-of-charge.""",
+            id="about",
         ),
         width="70%",
         padding_y=32,

@@ -1,55 +1,35 @@
 """General app components."""
 import pynecone as pc
 
-# def menu():
-#     return pc.box(pc.desktop_only(.menu_button())
-
 
 def navbar() -> pc.Component:
     """App navbar."""
     return pc.box(
         pc.hstack(
             pc.link(
-                pc.hstack(pc.image(src="favicon.ico"), pc.heading("PUG BE")), href="/"
+                pc.hstack(
+                    pc.image(src="logo.png", height="3em"), pc.heading("Python UG BE")
+                ),
+                href="/",
             ),
-            pc.desktop_only(
-                pc.breadcrumb(
-                    pc.breadcrumb_item(
-                        pc.breadcrumb_link(pc.heading("Home", size="md"), href="#")
-                    ),
-                    pc.breadcrumb_item(
-                        pc.breadcrumb_link(pc.heading("Docs", size="md"), href="#")
-                    ),
-                    pc.breadcrumb_item(
-                        pc.breadcrumb_link(pc.heading("Link", size="md"), href="#")
-                    ),
-                    separator="|",
-                    color="rgb(107,99,246)",
-                )
-            ),
-            pc.mobile_and_tablet(
-                pc.menu(
-                    pc.menu_button(
-                        pc.icon(
-                            tag="HamburgerIcon",
+            pc.hstack(
+                pc.link(
+                    pc.image(
+                        src=(
+                            "https://upload.wikimedia.org/wikipedia/commons/6/6b/"
+                            "Meetup_Logo.png"
                         ),
+                        height="3em",
                     ),
-                    pc.menu_list(
-                        pc.link(
-                            pc.menu_item("About GPT"), href="https://openai.com/api/"
-                        ),
-                        pc.link(
-                            pc.menu_item("Sign Out"), href="https://openai.com/api/"
-                        ),
-                        pc.menu_divider(),
-                        pc.link(
-                            pc.menu_item("About GPT"), href="https://openai.com/api/"
-                        ),
-                        pc.link(
-                            pc.menu_item("Sign Out"), href="https://openai.com/api/"
-                        ),
+                    href="https://www.meetup.com/python-user-group-belgium/",
+                ),
+                pc.link(
+                    pc.image(
+                        src="https://cdn-icons-png.flaticon.com/512/25/25231.png",
+                        height="3em",
                     ),
-                )
+                    href="https://github.com/python-usergroup-belgium",
+                ),
             ),
             justify="space-between",
             border_bottom="0.2em solid #F0F0F0",
@@ -67,9 +47,25 @@ def navbar() -> pc.Component:
 def footer() -> pc.Component:
     """App footer."""
     return pc.center(
-        pc.text("Python User Group Belgium", font_size="1.5em", as_="b"),
+        pc.text(
+            "Built with ❤️, powered by",
+            pc.image(
+                src=(
+                    "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/"
+                    "Python_logo_01.svg/600px-Python_logo_01.svg.png"
+                ),
+                height="1.5em",
+            ),
+            "+",
+            pc.image(src="https://pynecone.io/logo.png", height="1.5em"),
+            as_="b",
+            color="rgb(237 233 254)",
+            display="flex",
+        ),
+        font_size="1.5em",
         width="100%",
-        padding_y=6,
+        max_height=12,
+        padding_y=2,
         z_index="500",
         background="gray",
     )
