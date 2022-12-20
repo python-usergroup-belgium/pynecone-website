@@ -53,7 +53,7 @@ jobs:
       - name: Install dependencies
         run: ~/.bun/bin/bun install --cwd .web
       - name: Build and export with Bun
-        run: cd .web && bun run export
+        run: ~/.bun/bin/bun run --cwd .web export
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
