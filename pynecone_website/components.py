@@ -62,7 +62,7 @@ def footer() -> pc.Component:
             color="rgb(237 233 254)",
             display="flex",
         ),
-        font_size="1.5em",
+        font_size="1em",
         width="100%",
         max_height=12,
         padding_y=2,
