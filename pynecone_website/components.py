@@ -48,7 +48,7 @@ def footer() -> pc.Component:
     """App footer."""
     return pc.center(
         pc.text(
-            "Built with ❤️, powered by",
+            "Made with ❤️, powered by",
             pc.image(
                 src=(
                     "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/"
