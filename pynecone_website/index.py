@@ -81,7 +81,7 @@ def landing() -> Component:
                 pc.text(
                     "Belgium",
                     background_image=(
-                        "linear-gradient(271.68deg, #EE756A 0.75%, #756AEE 88.52%)"
+                        "linear-gradient(271.68deg, #beee6a 0.75%, #e02b1b 88.52%)"
                     ),
                     background_clip="text",
                 ),
@@ -93,8 +93,8 @@ def landing() -> Component:
                 "Check out our events!",
                 href="https://www.meetup.com/python-user-group-belgium/events/",
                 padding="0.5em",
-                box_shadow="rgba(151, 65, 252, 0.8) 0 15px 30px -10px",
-                background_image="linear-gradient(144deg,#AF40FF,#5B42F3 50%,#00DDEB)",
+                box_shadow="rgba(235, 80, 63, 0.8) 0 15px 30px -10px",
+                background_image="linear-gradient(144deg,#d90909,#eb3f3f 50%,#ebb73f)",
                 border_radius="1em",
                 color="white",
                 _hover={

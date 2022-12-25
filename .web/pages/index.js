@@ -44,8 +44,8 @@ return (
 <Box sx={{"position": "fixed", "width": "100%", "top": "0px", "zIndex": "500"}}>
 <HStack justify="space-between"
 sx={{"borderBottom": "0.2em solid #F0F0F0", "paddingX": "2em", "paddingY": "1em", "bg": "rgba(255,255,255, 0.90)"}}>
-<NextLink passHref={true}
-href="/">
+<NextLink href="/"
+passHref={true}>
 <Link>
 <HStack>
 <Image src="logo.png"
@@ -53,13 +53,13 @@ sx={{"height": "3em"}}/>
 <Heading size="lg">
 {`Python UG BE`}</Heading></HStack></Link></NextLink>
 <HStack>
-<NextLink passHref={true}
-href="https://www.meetup.com/python-user-group-belgium/">
+<NextLink href="https://www.meetup.com/python-user-group-belgium/"
+passHref={true}>
 <Link>
 <Image src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Meetup_Logo.png"
 sx={{"height": "3em"}}/></Link></NextLink>
-<NextLink passHref={true}
-href="https://github.com/python-usergroup-belgium">
+<NextLink href="https://github.com/python-usergroup-belgium"
+passHref={true}>
 <Link>
 <Image src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
 sx={{"height": "3em"}}/></Link></NextLink></HStack></HStack></Box>
@@ -69,11 +69,11 @@ sx={{"height": "3em"}}/></Link></NextLink></HStack></HStack></Box>
 sx={{"fontSize": "2em"}}>
 <Heading sx={{"fontSize": "2em", "paddingX": 8, "color": "white"}}>
 {`Python User Group `}
-<Text sx={{"backgroundImage": "linear-gradient(271.68deg, #EE756A 0.75%, #756AEE 88.52%)", "backgroundClip": "text"}}>
+<Text sx={{"backgroundImage": "linear-gradient(271.68deg, #beee6a 0.75%, #e02b1b 88.52%)", "backgroundClip": "text"}}>
 {`Belgium`}</Text></Heading>
-<NextLink passHref={true}
-href="https://www.meetup.com/python-user-group-belgium/events/">
-<Link sx={{"padding": "0.5em", "boxShadow": "rgba(151, 65, 252, 0.8) 0 15px 30px -10px", "backgroundImage": "linear-gradient(144deg,#AF40FF,#5B42F3 50%,#00DDEB)", "borderRadius": "1em", "color": "white", "_hover": {"opacity": 0.85}}}>
+<NextLink href="https://www.meetup.com/python-user-group-belgium/events/"
+passHref={true}>
+<Link sx={{"padding": "0.5em", "boxShadow": "rgba(235, 80, 63, 0.8) 0 15px 30px -10px", "backgroundImage": "linear-gradient(144deg,#d90909,#eb3f3f 50%,#ebb73f)", "borderRadius": "1em", "color": "white", "_hover": {"opacity": 0.85}}}>
 {`Check out our events!`}</Link></NextLink></VStack></Center>
 <Box sx={{"whiteSpace": "pre-line", "width": "60%", "paddingY": 32, "fontSize": 24}}>
 <ReactMarkdown children="`None`"
@@ -82,7 +82,7 @@ remarkPlugins={[remarkMath, remarkGfm]}
 rehypePlugins={[rehypeKatex, rehypeRaw]}
 src=""
 sx={{"paddingBottom": "0.5rem"}}>
-{`# Python user group Belgium
+{`# Python User Group Belgium
 
 ## What we're about
 
