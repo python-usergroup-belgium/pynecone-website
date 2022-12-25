@@ -87,6 +87,7 @@ def landing() -> Component:
                 ),
                 font_size="2em",
                 padding_x=8,
+                color="white",
             ),
             pc.link(
                 "Check out our events!",
@@ -103,15 +104,10 @@ def landing() -> Component:
             spacing="1.5em",
             font_size="2em",
         ),
-        padding_top=48,
-        padding_bottom=32,
-        background=(
-            "radial-gradient(circle at 22% 11%,rgba(62, 180, 137,.20),"
-            "hsla(0,0%,100%,0) 19%),radial-gradient(circle at 82% 25%,"
-            "rgba(33,150,243,.18),hsla(0,0%,100%,0) 35%),"
-            "radial-gradient(circle at 25% 61%,rgba(250, 128, 114, .28),"
-            "hsla(0,0%,100%,0) 55%)",
-        ),
+        padding_top=60,
+        padding_bottom=48,
+        background="url('blob.jpg')",
+        background_size="cover",
         width="100%",
     )
 
