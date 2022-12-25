@@ -5,6 +5,9 @@
 name: Deploy Next.js site to Pages
 
 on:
+  # Pull updates from submodule - other job is triggered at '0 0 * * *'
+  schedule:
+    - cron: '15 0 * * *'
   # Runs on pushes targeting the default branch
   push:
     branches: ["main"]
