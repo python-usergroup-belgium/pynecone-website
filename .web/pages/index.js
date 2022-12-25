@@ -171,9 +171,9 @@ sx={{"height": "1.5em"}}/>
 sx={{"height": "1.5em"}}/></Text></Center></VStack>
 <NextHead>
 <title>{`Python UG BE`}</title>
-<meta name="description"
-content="A Pynecone app."/>
-<meta property="og:image"
-content="favicon.ico"/></NextHead></Box>
+<meta content="A Pynecone app."
+name="description"/>
+<meta content="favicon.ico"
+property="og:image"/></NextHead></Box>
 )
 }
