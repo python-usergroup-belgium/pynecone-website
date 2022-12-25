@@ -1,13 +1,71 @@
 """Index page."""
+from pathlib import Path
+from typing import List, Self
 
 import pynecone as pc
-from pynecone import Component
+from pynecone import Component, Markdown, utils
+from pynecone.components.component import ImportDict
+from pynecone.var import BaseVar
+from rich.markup import Tag
 
-from pcconfig import config
 from pynecone_website.components import footer, navbar
 
-docs_url = "https://pynecone.io/docs/getting-started/introduction"
-filename = f"{config.app_name}/{config.app_name}.py"
+profile_dirpath = Path(__file__).parents[1] / "gh_profile" / "profile"
+
+
+class RehypeRawMarkdown(Markdown):
+    """Markdown component with `rehypeRaw` - markdown comments are not shown."""
+
+    def _get_imports(self: Self) -> ImportDict:
+        """Add `rehypeRaw`, `UnorderedList` and `ListItem` to imports."""
+        imports = super()._get_imports()
+        imports["@chakra-ui/react"] = {
+            "Heading",
+            "Code",
+            "Text",
+            "Link",
+            "UnorderedList",
+            "ListItem",
+        }
+        imports["rehype-raw"] = {"rehypeRaw"}
+        return imports
+
+    def _render(self: Self) -> Tag:
+        """Render with `rehypeRaw` component - markdown comments are hidden."""
+        tag = super()._render()
+        return tag.add_props(
+            children=utils.wrap(str(self.src).strip(), "`"),
+            components={
+                "h1": "{({node, ...props}) => <Heading size='2xl' {...props} />}",
+                "h2": "{({node, ...props}) => <Heading size='xl' {...props} />}",
+                "h3": "{({node, ...props}) => <Heading size='lg' {...props} />}",
+                "p": "{Text}",
+                "a": "{Link}",
+                "ul": "{UnorderedList}",
+                "li": "{ListItem}",
+                # "code": "{Code}"
+                "code": """{({node, inline, className, children, ...props}) =>
+                    {
+        const match = (className || '').match(/language-(?<lang>.*)/);
+        return !inline ? (
+          <Prism
+            children={String(children).replace(/\n$/, '')}
+            language={match ? match[1] : ''}
+            {...props}
+          />
+        ) : (
+          <Code {...props}>
+            {children}
+          </Code>
+        );
+      }}""".replace(
+                    "\n", " "
+                ),
+            },
+            remark_plugins=BaseVar(name="[remarkMath, remarkGfm]", type_=List[str]),
+            rehype_plugins=BaseVar(name="[rehypeKatex, rehypeRaw]", type_=List[str]),
+            src="",
+        )
 
 
 class State(pc.State):
@@ -61,24 +119,14 @@ def landing() -> Component:
 def about() -> Component:
     """About section."""
     return pc.box(
-        pc.markdown(
-            """## What we're about
-
-The Python User Group in Belgium is a community of Python enthusiasts who come together\
- to learn, share, and discuss all things Python. Members of the group range from\
- beginner to advanced levels, and everyone is welcome to join. The group meets on a\
- regular basis to learn from presentations and workshops, share their own experiences\
- and projects, and network with other members. In the future, the group might also host\
- regular events such as hackathons and coding competitions, to promote Python and its\
- uses. Whether you are a seasoned developer or just starting out with Python, the\
- Python User Group in Belgium is the place to be for anyone interested in the language.
-
-The focus is on knowledge sharing and community building, commercial intents are\
- frowned upon. All events are entirely free-of-charge.""",
+        RehypeRawMarkdown.create(
+            (profile_dirpath / "README.md").read_text() + "\n\n",
+            padding_bottom="0.5rem",
         ),
-        width="70%",
+        white_space="pre-line",
+        width="60%",
         padding_y=32,
-        font_size=26,
+        font_size=24,
     )
 
 
