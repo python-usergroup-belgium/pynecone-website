@@ -34,7 +34,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Pull submodule
-        run: git submodule update --remote
+        run: git submodule update --init --recursive
       - name: Set up Python 3.11
         uses: actions/setup-python@v2
         with:
