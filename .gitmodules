@@ -1,0 +1,3 @@
+[submodule "gh_profile"]
+	path = gh_profile
+	url = git@github.com:python-usergroup-belgium/.github.git
