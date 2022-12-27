@@ -116,7 +116,7 @@ def about() -> Component:
     """About section."""
     return pc.box(
         RehypeRawMarkdown.create(
-            (profile_dirpath / "README.md").read_text() + "\n\n",
+            (profile_dirpath / "README.md").read_text(),
             padding_bottom="0.5rem",
         ),
         white_space="pre-line",
