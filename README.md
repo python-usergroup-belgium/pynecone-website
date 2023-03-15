@@ -48,3 +48,7 @@ poetry shell              # Make sure you have Python 3.11 installed
 poetry install
 pre-commit install        # Install the pre-commmit hooks
 ```
+or copy and use this One-Liner: 
+
+```commandline
+sudo apt-get install pip -y && pip install poetry==1.2.2 && pip install pre-commit && cd pynecone-website/ && poetry shell && poetry install && pre-commit install ```
