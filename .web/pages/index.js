@@ -44,8 +44,8 @@ return (
 <Box sx={{"position": "fixed", "width": "100%", "top": "0px", "zIndex": "500"}}>
 <HStack justify="space-between"
 sx={{"borderBottom": "0.2em solid #F0F0F0", "paddingX": "2em", "paddingY": "1em", "bg": "rgba(255,255,255, 0.90)"}}>
-<NextLink href="/"
-passHref={true}>
+<NextLink passHref={true}
+href="/">
 <Link>
 <HStack>
 <Image src="logo.png"
@@ -53,13 +53,13 @@ sx={{"height": "3em"}}/>
 <Heading size="lg">
 {`Python UG BE`}</Heading></HStack></Link></NextLink>
 <HStack>
-<NextLink href="https://www.meetup.com/python-user-group-belgium/"
-passHref={true}>
+<NextLink passHref={true}
+href="https://www.meetup.com/python-user-group-belgium/">
 <Link>
 <Image src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Meetup_Logo.png"
 sx={{"height": "3em"}}/></Link></NextLink>
-<NextLink href="https://github.com/python-usergroup-belgium"
-passHref={true}>
+<NextLink passHref={true}
+href="https://github.com/python-usergroup-belgium">
 <Link>
 <Image src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
 sx={{"height": "3em"}}/></Link></NextLink></HStack></HStack></Box>
@@ -71,8 +71,8 @@ sx={{"fontSize": "2em"}}>
 {`Python User Group `}
 <Text sx={{"backgroundImage": "linear-gradient(271.68deg, #beee6a 0.75%, #e02b1b 88.52%)", "backgroundClip": "text"}}>
 {`Belgium`}</Text></Heading>
-<NextLink href="https://www.meetup.com/python-user-group-belgium/events/"
-passHref={true}>
+<NextLink passHref={true}
+href="https://www.meetup.com/python-user-group-belgium/events/">
 <Link sx={{"padding": "0.5em", "boxShadow": "rgba(235, 80, 63, 0.8) 0 15px 30px -10px", "backgroundImage": "linear-gradient(144deg,#d90909,#eb3f3f 50%,#ebb73f)", "borderRadius": "1em", "color": "white", "_hover": {"opacity": 0.85}}}>
 {`Check out our events!`}</Link></NextLink></VStack></Center>
 <Box sx={{"whiteSpace": "pre-line", "width": "60%", "paddingY": 32, "fontSize": 24}}>
@@ -100,7 +100,6 @@ cog.out(
 ]]] -->
 ## Upcoming events
 
-- [23/02/23 (Thu), at 18:00 - Kick-off event 🚀](https://www.meetup.com/python-user-group-belgium/events/290213450/)
 <!-- [[[end]]] -->
 
 ## Presentations
@@ -154,11 +153,21 @@ Our aim is to create a space for the Python community in Belgium. Therefore, we 
 
 Reach out to [Murilo Cunha](mailto:murilo.k.s.cunha95@gmail.com) or [Vitale Sparacello](mailto:vitale.spara@gmail.com) if you'd like to sponsor an event. We're always looking for help with the beers, food or locations.
 
+The contributions made by sponsors play a vital role in creating a vibrant and welcoming atmosphere that encourages community involvement and active participation.
+
+- At a minimum, we expect sponsors to provide a venue that can accommodate approximately 50 seats 🪑
+- Although optional, providing food and drinks are welcomed highly and appreciated! 🍕🍻
+- Sponsors can place their banner near the presentation area and will be recognized on social media and during the event 👏
+- Activities related to recruitment or sales are not permitted during the meetup ⛔️
+
+The success of the event is highly dependent on the collective support and involvement of its members.
+
+- Active participation and promotion of the meetup by all community members are highly encouraged 📣
+- Third-party organizations are welcome to share information about the event to help increase awareness and participation 🤝
+
 ### Reach out
 
 We'd like to hear from you! Feel free to open an issue or open a pull request at [github.com/python-usergroup-belgium/.github](https://github.com/python-usergroup-belgium/.github).
-
-
 `}</ReactMarkdown></Box>
 <Center sx={{"fontSize": "1em", "width": "100%", "maxHeight": 12, "paddingY": 2, "zIndex": "500", "background": "gray"}}>
 <Text as="b"
@@ -171,9 +180,9 @@ sx={{"height": "1.5em"}}/>
 sx={{"height": "1.5em"}}/></Text></Center></VStack>
 <NextHead>
 <title>{`Python UG BE`}</title>
-<meta content="A Pynecone app."
-name="description"/>
-<meta content="favicon.ico"
-property="og:image"/></NextHead></Box>
+<meta name="description"
+content="A Pynecone app."/>
+<meta property="og:image"
+content="favicon.ico"/></NextHead></Box>
 )
 }
