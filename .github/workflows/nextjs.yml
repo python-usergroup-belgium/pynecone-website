@@ -52,7 +52,7 @@ jobs:
         run: |
           python -c "from pynecone_website.pynecone_website import app; app.compile(force_compile=True)"
       - name: Setup Bun
-        run: curl -fsSL https://bun.sh/install | bash
+        run: curl -fsSL https://bun.sh/install | bash -s -- bun-v0.3.0
       - name: Setup Pages
         uses: actions/configure-pages@v2
         with:
