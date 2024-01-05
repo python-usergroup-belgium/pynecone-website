@@ -133,3 +133,6 @@ dmypy.json
 
 # Database - not required for frontend only (static)
 pynecone.db
+
+# DevContainer - only used for local development with `bun`
+.devcontainer/
