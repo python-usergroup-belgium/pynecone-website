@@ -31,6 +31,14 @@ def navbar() -> pc.Component:
                     ),
                     href="https://github.com/python-usergroup-belgium",
                 ),
+                pc.link(
+                    pc.image(
+                        src=("https://cdn-icons-png.flaticon.com/512/55/55281.png"),
+                        height="3em",
+                        marginX="0.25em",
+                    ),
+                    href="/events",
+                ),
             ),
             justify="space-between",
             border_bottom="0.2em solid #F0F0F0",
@@ -58,7 +66,11 @@ def footer() -> pc.Component:
                 height="1.5em",
             ),
             "+",
-            pc.image(src="https://pynecone.io/logo.png", height="1.5em"),
+            pc.image(
+                src="https://avatars.githubusercontent.com/u/104714959",
+                height="1.5em",
+                borderRadius="0.25rem",
+            ),
             as_="b",
             color="rgb(237 233 254)",
             display="flex",
