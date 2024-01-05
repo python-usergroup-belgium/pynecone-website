@@ -1,19 +1,19 @@
 <div align="center"><img width="20%" src="https://raw.githubusercontent.com/python-usergroup-belgium/pynecone-website/main/assets/logo.png"/></div>
 
-# Pynecone website
+# Reflex (previously Pynecone) website
 
 > Python-powered website for the Python User Group Belgium.
 
 ## Powered by
 
 - Python 3.11 ⚡️
-- Pynecone 🎍
+- Reflex 🎍
 
 ## About
 
-### Pynecone
+### Reflex (previously Pynecone)
 
-[Pynecone](https://pynecone.io/) is a Python framework for building web apps. The code is transpiled to [Next.js](https://nextjs.org/), placed in the `.web/` directory.
+[Reflex](https://reflex.dev/) (previously [Pynecone](https://pynecone.io/)) is a Python framework for building web apps. The code is transpiled to [Next.js](https://nextjs.org/), placed in the `.web/` directory.
 
 ### Hosting
 
